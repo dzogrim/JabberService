@@ -20,4 +20,8 @@ color:red; font-size: 0.6em
 .btn {
 padding: 6px 10px; background: #497ed5; color: white; font-weight: bold;
  }
+#cmenu {
+  font-size: 1.4em;
+}
+
 </style>

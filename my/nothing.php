@@ -25,7 +25,7 @@ require_once("header.php");
 require_once("css.php"); 
 ?>
 
-<p>
+<p id="cmenu">
 <b><?php __("Menu:"); ?></b>
  <a href="create.php"><?php __("Create an account"); ?></a> - 
  <?php __("I lost my password"); ?> - 

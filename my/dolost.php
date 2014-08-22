@@ -68,6 +68,8 @@ if ($found==5 && $_POST["url"]=="") {
 	$error[]=_("The email has NOT been sent, please try again later or contact us");
       } else {
 	$info[]=_("An email has been sent to the address you entered. Please check your mail and click the link to reset your password");
+	require_once("nothing.php");
+	exit();
       }
     } // still no error ? 
   } // no error ?
