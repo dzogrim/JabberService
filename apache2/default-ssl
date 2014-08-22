@@ -1,0 +1,50 @@
+<IfModule mod_ssl.c>
+<VirtualHost _default_:443>
+	ServerAdmin contact@laquadrature.net
+
+	DocumentRoot /var/www/htdocs
+
+	RewriteRule ^/http-bind(.*) http://localhost:5280/http-bind$1 [P,L]
+
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/>
+		Options -Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/ssl_access.log combined
+
+	#   SSL Engine Switch:
+	#   Enable/Disable SSL for this virtual host.
+	SSLEngine on
+
+	SSLCertificateFile    /etc/ssl/private/star.lqdn.fr.crt
+	SSLCertificateKeyFile /etc/ssl/private/star.lqdn.fr.key
+	SSLCertificateChainFile /etc/ssl/private/star.lqdn.fr.chain
+
+	BrowserMatch "MSIE [2-6]" \
+		nokeepalive ssl-unclean-shutdown \
+		downgrade-1.0 force-response-1.0
+	# MSIE 7 and newer should be able to use keepalive
+	BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
+
+	  Header set Strict-Transport-Security "max-age=31622400"
+
+	  SSLHonorCipherOrder on
+	  SSLCipherSuite -ALL:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:DHE-RSA-CAMELLIA256-SHA:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-SEED-SHA:DHE-RSA-CAMELLIA128-SHA:ECDHE-RSA-DES-CBC3-SHA:DHE-RSA-DES-CBC3-SHA:DES-CBC3-SHA:TLS_RSA_WITH_3DES_EDE_CBC_SHA:ECDHE-RSA-RC4-SHA:RC4-SHA
+	  SSLProtocol all -SSLv2 -SSLv3
+
+</VirtualHost>
+</IfModule>
