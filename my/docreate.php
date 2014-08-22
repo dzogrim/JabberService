@@ -35,6 +35,7 @@ if ($found==6 && $_POST["url"]=="") {
   if (!csrf_check($_POST["csrf"])) {
     $error[]=_("The captcha is incorrect, please try again (2)"); 
   }
+  $_POST["login"]=mb_strtolower($_POST["login"], 'UTF-8');
   $login=fixlogin($_POST["login"]);
   if ($login!=$_POST["login"] || strlen($login)<3 || strlen($login)>80) {
     $error[]=_("The login must be between 3 and 80 characters long, and must not contains special characters (unicode and accents authorized though)");
