@@ -58,7 +58,7 @@ msgid ""
 "name and enter a password two times in the form below. You can also give us "
 "a non-mandatory email address which will allow you to change your password "
 "if you lose it later."
-msgstr ""
+msgstr "Si vous souhaitez créer un compte sur ce seruver Jabber, merci d'entrer un nom d'utilisateur et un mot de passe (deux fois), dans le formulaire ci-dessous. Vous pouvez aussi saisir une adresse email (facultative) qui vous permettra de modifier votre mot de passe plus tard si vous le perdez."
 
 #: create.php:57 lost.php:57
 msgid "Login"
@@ -90,7 +90,7 @@ msgstr "Créer mon compte"
 
 #: create.php:83
 msgid "Please note that:"
-msgstr ""
+msgstr "Attention :"
 
 #: create.php:85
 msgid ""
@@ -99,14 +99,14 @@ msgid ""
 "allowed to recover that account if we have an email address for this "
 "account. After that, any disabled account will be permanently destroyed and "
 "the login will be available again for other users"
-msgstr ""
+msgstr "Tout compte inutilisé pendant plus de 6 mois sera automatiquement désactivé. Et ce nom d'utilisateur ne pourra pas être utilisé à nouveau pendant 6 mois supplémentaires. Pendant ce temps, vous pourrez récupérer ce compte si vous aviez renseigné une adresse email à l'inscription. Après cette période, les comptes désactivés sont définitement détruits et le nom d'utilisateur à novueau disponible pour d'autres personnes."
 
 #: create.php:86
 msgid ""
 "We don't store your password or email in cleartext, but only a hashed "
 "version. We don't verify your email address, so write it down properly. We "
 "will only use it to send you a recover link if you lose your password."
-msgstr ""
+msgstr "Nous ne stockons pas votre mot de passe ni votre email en clair, mais uniquement une version hashé. Nous ne vérifions pas votre adresse email, aussi veillez à bien l'orthographier. Nous ne l'utiliserons que pour vous envoyer un lien de restauration si vous perdez votre mot de passe."
 
 #: disabled.php:50
 msgid "No it's not"
@@ -122,77 +122,77 @@ msgstr "Le captcha est incorrect, merci de réessayer (2)"
 
 #: dochangepass.php:43 dolost.php:83
 msgid "The url is incorrect. please check your mail or contact us."
-msgstr ""
+msgstr "L'url est incorrecte, vérifiez votre mail ou contactez-nous."
 
 #: dochangepass.php:49 dolost.php:47 dolost.php:89
 #, php-format
 msgid ""
 "This account doesn't exist, or have been permanently destroyed. <a href=\"%s"
 "\">Click here to create a new account with this login</a>."
-msgstr ""
+msgstr "Ce compte n'esite pas, ou a été détruit irrémédiablement. <a href=\"%s\">Cliquez ici pour créer un nouveau compte avec ce nom d'utilisateur</a>."
 
 #: dochangepass.php:53 dolost.php:96
 msgid "The provided key is incorrect, please check your mail or contact us."
-msgstr ""
+msgstr "La clé est incorrecte, vérifiez votre mail ou contactez-nous."
 
 #: dochangepass.php:57 docreate.php:44
 msgid ""
 "Your passwords are not the same, or contains special characters (unicode and "
 "accents authorized though), please try again"
-msgstr ""
+msgstr "Vos 2 mots de passe ne sont pas les mêmes, ou contiennent des caractères spéciaux (notez que l'unicode et les accents sont autorisés), merci de réessayer"
 
 #: dochangepass.php:60 dolost.php:50 dolost.php:92
 #, php-format
 msgid ""
 "This account have been disabled. <a href=\"%s\">Click here to restore it</a>."
-msgstr ""
+msgstr "Ce compte est désactivé. <a href=\"%s\">Cliquez ici pour le restaurer</a>."
 
 #: dochangepass.php:68 docreate.php:60
 msgid "Can't connect to jabber server"
-msgstr ""
+msgstr "Impossible de se connecter au serveur jabber"
 
 #: dochangepass.php:78
 #, php-format
 msgid ""
 "Your password for account %s has been changed, you can use your new password "
 "right now."
-msgstr ""
+msgstr "Votre mot de passe pour le compte %s a été modifié. Vous pouvez l'utiliser dès maintenant."
 
 #: dochangepass.php:85
 msgid ""
 "An error occurred trying to change your password, please try again later"
-msgstr ""
+msgstr "Une erreur est survenue lors du changement de mot de passe, merci de réessayer ultérieurement."
 
 #: docreate.php:40 dolost.php:40
 msgid ""
 "The login must be between 3 and 80 characters long, and must not contains "
 "special characters (unicode and accents authorized though)"
-msgstr ""
+msgstr "Le nom d'utilisateur doit faire entre 3 et 80 caractères, et ne doit pas contenir de caractères spéciaux (notez que l'unicode et les accents sont autorisés)"
 
 #: docreate.php:51
 msgid ""
 "This account already exist, or is disabled. You can't create that login now, "
 "please find another one!"
-msgstr ""
+msgstr "Ce compte existe déjà, ou est désactivé. Vous ne pouvez pas l'utiliser maintenant, merci d'en trouver un autre !"
 
 #: docreate.php:72
 msgid "Your account has been created successfully. You can use it immediately."
-msgstr ""
+msgstr "Votre compte a été créé avec succès, vous pouvez l'utiliser dès maintenant."
 
 #: docreate.php:80
 msgid "An error occurred trying to create your account, please try again later"
-msgstr ""
+msgstr "Une erreur est survenue lors de la création de votre compte, merci de réessayer ultérieurement."
 
 #: dolost.php:53
 msgid ""
 "This account's email address is not the one you entered. Please try again "
 "with another email address."
-msgstr ""
+msgstr "L'adresse email associée à ce compte n'est pas celle que vous avez renseigné. Merci de réessayer avec une autre adresse."
 
 #: dolost.php:65
 #, php-format
 msgid "Password lost on %s"
-msgstr ""
+msgstr "Mot de passe perdu pour %s"
 
 #: dolost.php:66
 #, php-format
@@ -210,26 +210,36 @@ msgid ""
 "Thanks a lot for your understanding.\n"
 "Regards\n"
 "The Jabber Chat Team\n"
-msgstr ""
+msgstr "Vous recevez cet email car vous avez créé un compte de Chat Jabber sur %s et avez perdu votre mot de passe.\n"
+"\n"
+"Merci de cliquer su le lien ci-dessous pour modifier votre mot de passe.\n"
+"\n"
+"%s\n"
+"\n"
+"Si vous n'avez pas demandé ce rappel de mot de passe, vous pouver ignorer ce message ou nous contacter.\n"
+"\n"
+"Merci de votre compréhension.\n"
+"Amicalement,\n"
+"L'équipe Chat Jabber\n"
 
 #: dolost.php:68
 msgid "The email has NOT been sent, please try again later or contact us"
-msgstr ""
+msgstr "L'email n'a PAS été envoyé, merci de réessayer ultérieurement ou de nous contacter"
 
 #: dolost.php:70
 msgid ""
 "An email has been sent to the address you entered. Please check your mail "
 "and click the link to reset your password"
-msgstr ""
+msgstr "Un email a été envoyé à l'adresse que vous avez saisi. Vérifiez votre mail et cliquez sur le lien pour modifier votre mot de passe"
 
 #: dolost.php:100
 #, php-format
 msgid "Please enter a new password (twice) for your account %s"
-msgstr ""
+msgstr "Entrez un nouveau mot de passe (deux fois) pour votre compte %s"
 
 #: lost.php:37
 msgid "You lost your password on this Jabber server"
-msgstr ""
+msgstr "Vous avez perdu votre mot de passe sur ce serveur Jabber"
 
 #: lost.php:52
 msgid ""
@@ -237,8 +247,8 @@ msgid ""
 "email address when you created that account, please enter your login and the "
 "email you use at that time. You will receive an email with a link to reset "
 "your password for this account."
-msgstr ""
+msgstr "Si vous avez perdu votre mot de passe sur ce serveur Jabber, et si vous avez saisi une adresse email lors de sa création, saisissez ici le nom d'utilisateur et l'email associé à ce compte. Vous recevrez par mail un lien vous permettant de réinitaliser votre mot de pase pour ce compte."
 
 #: lost.php:74
 msgid "Send me a password restore link by mail"
-msgstr ""
+msgstr "Envoyez-moi un lien de changement de mot de passe par mail"
