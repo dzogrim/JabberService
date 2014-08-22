@@ -25,6 +25,8 @@ $pass_line_count_telnet=12;
 // automatic session starting (for csrf/captcha management)
 session_start();
 
+require_once("lang.php");
+
 function __($str) { echo _($str); }
 
 function ehe($str) { echo htmlentities($str); }
@@ -59,3 +61,4 @@ function fixlogin($str) {
   }
   return $str;
 }
+

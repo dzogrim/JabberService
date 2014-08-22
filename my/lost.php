@@ -31,7 +31,7 @@ require_once("css.php");
 <b><?php __("Menu:"); ?></b>
  <a href="create.php"><?php __("Create an account"); ?></a> - 
  <?php __("I lost my password"); ?> - 
- <a href="recover.php"><?php __("My account is disabled"); ?></a>
+ <a href="disabled.php"><?php __("My account is disabled"); ?></a>
 </p>
 
 <h1><?php __("You lost your password on this Jabber server"); ?></h1>

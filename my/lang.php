@@ -19,39 +19,27 @@
     You can find the source code of this software at https://github.com/LaQuadratureDuNet/JabberService
  */
 
-require_once("config.php"); 
+$languages = array("fr" => "fr_FR",
+		   "es" => "es_ES",
+		   "de" => "de_DE",
+		   "it" => "it_IT",
+		   );
 
-require_once("header.php");
-require_once("css.php"); 
-?>
+$lang = "en_US";
+$lang_short = "en";
+bindtextdomain("messages", dirname(__FILE__)."/locales");
 
-<p id="cmenu">
-<b><?php __("Menu:"); ?></b>
- <a href="create.php"><?php __("Create an account"); ?></a> - 
- <?php __("I lost my password"); ?> - 
- <a href="disabled.php"><?php __("My account is disabled"); ?></a>
-</p>
-
-<h1></h1>
-
-<?php
-if (count($error)) {
-  echo "<div class=\"error\">";
-  foreach($error as $e) echo $e."<br>\n";
-  echo "</div>";
+if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+  $lang_short  = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+  if (isset($languages[$lang_short])) {
+    $lang=$languages[$lang_short];
+  }
 }
-if (count($info)) {
-  echo "<div class=\"info\">";
-  foreach($info as $e) echo $e."<br>\n";
-  echo "</div>";
-}
-?>
 
-
-  <p>&nbsp;</p>
-
-
-<?php
-require_once("footer.php");
-?>
-
+putenv("LC_MESSAGES=".$lang);
+putenv("LANG=".$lang);
+putenv("LANGUAGE=".$lang);
+setlocale(LC_ALL,$lang);
+textdomain("messages")
+$charset = "UTF-8";
+bind_textdomain_codeset("messages",$charset);

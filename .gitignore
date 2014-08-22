@@ -1,1 +1,3 @@
 my/config.php
+my/locales/*/LC_MESSAGES/messages.mo
+my/messages.pot

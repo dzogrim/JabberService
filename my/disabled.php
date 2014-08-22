@@ -21,8 +21,6 @@
 
 require_once("config.php"); 
 
-require_once("dochangepass.php"); 
-
 require_once("header.php");
 require_once("css.php"); 
 ?>
@@ -30,11 +28,11 @@ require_once("css.php");
 <p id="cmenu">
 <b><?php __("Menu:"); ?></b>
  <a href="create.php"><?php __("Create an account"); ?></a> - 
- <?php __("I lost my password"); ?> - 
- <a href="disabled.php"><?php __("My account is disabled"); ?></a>
+ <a href="lost.php"><?php __("I lost my password"); ?></a> - 
+<?php __("My account is disabled"); ?>
 </p>
 
-<h1><?php __("Change your password"); ?></h1>
+<h1><?php __("My account is disabled"); ?></h1>
 
 <?php
 if (count($error)) {
@@ -49,23 +47,7 @@ if (count($info)) {
 }
 ?>
 
-<form method="post" action="/my/changepass.php">
-  <input type="hidden" name="csrf" value="<?php echo csrf_gen(); ?>" />
-  <input type="hidden" name="id" value="<?php echo $id; ?>" />
-  <input type="hidden" name="key" value="<?php echo $key; ?>" />
-  <table style="width: 700px">
-  <tr><th style="width: 250px"><?php __("New password"); ?><sup>*</sup></th>
-  <td style="width: 450px"><input type="password" name="pass1" id="pass1" value="<?php eher("pass1"); ?>" style="width: 200px"/></td></tr>
-  <tr><th><?php __("New password (again)"); ?><sup>*</sup></th>
-  <td><input type="password" name="pass2" id="pass2" value="<?php eher("pass2"); ?>" style="width: 200px"/></td></tr>
-</table>
-
-<div class="wichtig">
-<?php __("Don't put anything in this field"); ?><input type="text" name="url" id="url" value="" style="width: 200px"/>
-</div>
-  <input type="submit" name="go" value="<?php __("Change my password"); ?>" class="btn" id="go"/>
-</form>
-
+<p><?php __("No it's not"); ?></p>
   <p>&nbsp;</p>
 
 

@@ -1,0 +1,244 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JabberService 2014.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-22 14:16+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: changepass.php:31 create.php:31 disabled.php:29 lost.php:31 nothing.php:29
+msgid "Menu:"
+msgstr ""
+
+#: changepass.php:32 create.php:32 disabled.php:30 lost.php:32 nothing.php:30
+msgid "Create an account"
+msgstr ""
+
+#: changepass.php:33 create.php:33 disabled.php:31 lost.php:33 nothing.php:31
+msgid "I lost my password"
+msgstr ""
+
+#: changepass.php:34 create.php:34 disabled.php:32 disabled.php:35 lost.php:34
+#: nothing.php:32
+msgid "My account is disabled"
+msgstr ""
+
+#: changepass.php:37
+msgid "Change your password"
+msgstr ""
+
+#: changepass.php:57
+msgid "New password"
+msgstr ""
+
+#: changepass.php:59
+msgid "New password (again)"
+msgstr ""
+
+#: changepass.php:64 create.php:77 lost.php:72
+msgid "Don't put anything in this field"
+msgstr ""
+
+#: changepass.php:66
+msgid "Change my password"
+msgstr ""
+
+#: create.php:37
+msgid "Account creation on our Jabber server"
+msgstr ""
+
+#: create.php:52
+msgid ""
+"If you want to create an account on our Jabber server, please enter a login "
+"name and enter a password two times in the form below. You can also give us "
+"a non-mandatory email address which will allow you to change your password "
+"if you lose it later."
+msgstr ""
+
+#: create.php:57 lost.php:57
+msgid "Login"
+msgstr ""
+
+#: create.php:57 lost.php:57
+msgid "3 characters or more"
+msgstr ""
+
+#: create.php:60
+msgid "Password"
+msgstr ""
+
+#: create.php:62
+msgid "Password (again)"
+msgstr ""
+
+#: create.php:64 lost.php:60
+msgid "Your email address"
+msgstr ""
+
+#: create.php:67 lost.php:63
+msgid "Enter this word to prove you are human"
+msgstr ""
+
+#: create.php:79
+msgid "Create my account"
+msgstr ""
+
+#: create.php:83
+msgid "Please note that:"
+msgstr ""
+
+#: create.php:85
+msgid ""
+"Any account unused for 6 months will be disabled, and this login will not be "
+"allowed as registration for 6 more months. During that time, you will be "
+"allowed to recover that account if we have an email address for this "
+"account. After that, any disabled account will be permanently destroyed and "
+"the login will be available again for other users"
+msgstr ""
+
+#: create.php:86
+msgid ""
+"We don't store your password or email in cleartext, but only a hashed "
+"version. We don't verify your email address, so write it down properly. We "
+"will only use it to send you a recover link if you lose your password."
+msgstr ""
+
+#: disabled.php:50
+msgid "No it's not"
+msgstr ""
+
+#: dochangepass.php:36 docreate.php:33 dolost.php:33
+msgid "The captcha is incorrect, please try again"
+msgstr ""
+
+#: dochangepass.php:39 docreate.php:36 dolost.php:36
+msgid "The captcha is incorrect, please try again (2)"
+msgstr ""
+
+#: dochangepass.php:43 dolost.php:83
+msgid "The url is incorrect. please check your mail or contact us."
+msgstr ""
+
+#: dochangepass.php:49 dolost.php:47 dolost.php:89
+#, php-format
+msgid ""
+"This account doesn't exist, or have been permanently destroyed. <a href=\"%s"
+"\">Click here to create a new account with this login</a>."
+msgstr ""
+
+#: dochangepass.php:53 dolost.php:96
+msgid "The provided key is incorrect, please check your mail or contact us."
+msgstr ""
+
+#: dochangepass.php:57 docreate.php:44
+msgid ""
+"Your passwords are not the same, or contains special characters (unicode and "
+"accents authorized though), please try again"
+msgstr ""
+
+#: dochangepass.php:60 dolost.php:50 dolost.php:92
+#, php-format
+msgid ""
+"This account have been disabled. <a href=\"%s\">Click here to restore it</a>."
+msgstr ""
+
+#: dochangepass.php:68 docreate.php:60
+msgid "Can't connect to jabber server"
+msgstr ""
+
+#: dochangepass.php:78
+#, php-format
+msgid ""
+"Your password for account %s has been changed, you can use your new password "
+"right now."
+msgstr ""
+
+#: dochangepass.php:85
+msgid ""
+"An error occurred trying to change your password, please try again later"
+msgstr ""
+
+#: docreate.php:40 dolost.php:40
+msgid ""
+"The login must be between 3 and 80 characters long, and must not contains "
+"special characters (unicode and accents authorized though)"
+msgstr ""
+
+#: docreate.php:51
+msgid ""
+"This account already exist, or is disabled. You can't create that login now, "
+"please find another one!"
+msgstr ""
+
+#: docreate.php:72
+msgid "Your account has been created successfully. You can use it immediately."
+msgstr ""
+
+#: docreate.php:80
+msgid "An error occurred trying to create your account, please try again later"
+msgstr ""
+
+#: dolost.php:53
+msgid ""
+"This account's email address is not the one you entered. Please try again "
+"with another email address."
+msgstr ""
+
+#: dolost.php:65
+#, php-format
+msgid "Password lost on %s"
+msgstr ""
+
+#: dolost.php:66
+#, php-format
+msgid ""
+"You receive this email because you created a Jabber Chat account on %s and "
+"lost your pasword.\n"
+"\n"
+"Please click the link below to reset your password.\n"
+"\n"
+"%s\n"
+"\n"
+"If you didn't asked for this password reminder, please ignore this message "
+"or contact us.\n"
+"\n"
+"Thanks a lot for your understanding.\n"
+"Regards\n"
+"The Jabber Chat Team\n"
+msgstr ""
+
+#: dolost.php:68
+msgid "The email has NOT been sent, please try again later or contact us"
+msgstr ""
+
+#: dolost.php:70
+msgid ""
+"An email has been sent to the address you entered. Please check your mail "
+"and click the link to reset your password"
+msgstr ""
+
+#: dolost.php:100
+#, php-format
+msgid "Please enter a new password (twice) for your account %s"
+msgstr ""
+
+#: lost.php:37
+msgid "You lost your password on this Jabber server"
+msgstr ""
+
+#: lost.php:52
+msgid ""
+"If you have lost your password in this Jabber server, and if you entered an "
+"email address when you created that account, please enter your login and the "
+"email you use at that time. You will receive an email with a link to reset "
+"your password for this account."
+msgstr ""
+
+#: lost.php:74
+msgid "Send me a password restore link by mail"
+msgstr ""
