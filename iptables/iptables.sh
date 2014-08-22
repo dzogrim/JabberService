@@ -56,6 +56,13 @@ do
     iptables -A IN_STANDARD -p tcp --dport 22 -s $ip  -j ACCEPT
     iptables -A OUT_STANDARD -p tcp --sport 22 -d $ip  -j ACCEPT
 done
+# Outgoing ssh : to github ;) 
+for ip in 192.30.252.0/22
+do
+    iptables -A OUT_STANDARD -p tcp --dport 22 -d $ip  -j ACCEPT
+    iptables -A IN_STANDARD -p tcp --sport 22 -s $ip  -j ACCEPT
+done
+
 # BUG WITH "--limit" module on LXC, don't use it for now ...
 iptables -A OUT_STANDARD -p icmp -j ACCEPT        
 iptables -A IN_STANDARD -p icmp -j ACCEPT
