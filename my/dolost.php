@@ -63,12 +63,41 @@ if ($found==5 && $_POST["url"]=="") {
       $mail->FromName = $mail_fromname;
       $mail->addAddress($_POST["email"]);
       $mail->Subject = sprintf(_("Password lost on %s"),$domain);
-      $mail->Body = sprintf(_("You receive this email because you created an Jabber Chat account on %s and lost your pasword.\n\nPlease click the link below to reset your password.\n\n%s\n\nIf you didn't asked for this password reminder, please ignore this message or contact us.\n\nThanks a lot for your understanding.\nRegards\nThe Jabber Chat Team\n"),$domain,$rooturl."/recover/".$already["id"]."/".$key);
+      $mail->Body = sprintf(_("You receive this email because you created a Jabber Chat account on %s and lost your pasword.\n\nPlease click the link below to reset your password.\n\n%s\n\nIf you didn't asked for this password reminder, please ignore this message or contact us.\n\nThanks a lot for your understanding.\nRegards\nThe Jabber Chat Team\n"),$domain,$rooturl."/recover/".$already["id"]."/".$key);
       if(!$mail->send()) {
 	$error[]=_("The email has NOT been sent, please try again later or contact us");
       } else {
 	$info[]=_("An email has been sent to the address you entered. Please check your mail and click the link to reset your password");
       }
+    } // still no error ? 
+  } // no error ?
+} // isset ?
+
+
+// Recover step 2
+if (isset($_GET["id"]) && isset($_GET["key"])) {
+  $id=intval($_GET["id"]);
+  if (!$id || !preg_match('#^[0-9a-f]{16}$#',$_GET["key"])) {
+    $error[]=_("The url is incorrect. please check your mail or contact us."); 
+  }
+  if (count($error)==0) {
+    // Does it exist? 
+    $already=@mysql_fetch_assoc(mysql_query("SELECT * FROM accounts WHERE id='".$id."';"));
+    if (!$already) {
+      $error[]=sprintf(_("This account doesn't exist, or have been permanently destroyed. <a href=\"%s\">Click here to create a new account with this login</a>."),"create.php");
+    }
+    if ($already["disabledate"]!="") {
+      $error[]=sprintf(_("This account have been disabled. <a href=\"%s\">Click here to restore it</a>."),"recover.php");
+    }
+    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]),0,16);
+    if ($key!=$_GET["key"]) {
+      $error[]=_("The provided key is incorrect, please check your mail or contact us.");
+    }
+    if (count($error)==0) {
+      // change the password (form)
+      $info[]=sprintf(_("Please enter a new password (twice) for your account %s"),$already["jabberid"]);
+      require_once("changepass.php");
+      exit();
     } // still no error ? 
   } // no error ?
 } // isset ?
