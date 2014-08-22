@@ -72,6 +72,8 @@ if ($found==6 && $_POST["url"]=="") {
 	  $info[]=_("Your account has been created successfully. You can use it immediately.");
 	  unset($_POST);
 	  unset($_REQUEST);
+	  require_once("nothing.php");
+	  exit();
 	} else {
 	  if ($debug) { $s=fgets($f,1024); echo ":".$s.":<br>"; }
 	  mysql_query("DELETE FROM accounts WHERE jabberid='".addslashes($_POST["login"]."@".$domain)."';");
