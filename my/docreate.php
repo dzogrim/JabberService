@@ -64,7 +64,7 @@ if ($found==6 && $_POST["url"]=="") {
 	  $s=fgets($f,1024);
 	  if ($debug) echo ":".$s.":<br>";
 	}
-	fputs($f,'user:create("'.$login.'@'.$domain.'","'.$password."\")\n");
+	fputs($f,'user:create("'.$login.'@'.$domain.'","'.$pass."\")\n");
 	$s=fgets($f,1024);
 	if ($debug) echo ":".$s.":<br>";
 	if (trim($s)=="| OK: User created") {

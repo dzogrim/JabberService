@@ -1,0 +1,3 @@
+
+RewriteEngine On
+RewriteRule /recover/([0-9]*)/([0-9a-fA-F]*) lost.php?id=$1&key=$2 [L]
