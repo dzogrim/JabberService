@@ -1,5 +1,7 @@
 <?php
 
+// automatic session starting (for csrf/captcha management)
+session_start();
 
 function __($str) { echo _($str); }
 
