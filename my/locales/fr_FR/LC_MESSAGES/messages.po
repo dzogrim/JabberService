@@ -13,44 +13,44 @@ msgstr ""
 
 #: changepass.php:31 create.php:31 disabled.php:29 lost.php:31 nothing.php:29
 msgid "Menu:"
-msgstr ""
+msgstr "Menu :"
 
 #: changepass.php:32 create.php:32 disabled.php:30 lost.php:32 nothing.php:30
 msgid "Create an account"
-msgstr ""
+msgstr "Créer un compte"
 
 #: changepass.php:33 create.php:33 disabled.php:31 lost.php:33 nothing.php:31
 msgid "I lost my password"
-msgstr ""
+msgstr "J'ai perdu mon mot de passe"
 
 #: changepass.php:34 create.php:34 disabled.php:32 disabled.php:35 lost.php:34
 #: nothing.php:32
 msgid "My account is disabled"
-msgstr ""
+msgstr "Mon compte est désactivé"
 
 #: changepass.php:37
 msgid "Change your password"
-msgstr ""
+msgstr "Modifier votre mot de passe"
 
 #: changepass.php:57
 msgid "New password"
-msgstr ""
+msgstr "Nouveau mot de passe"
 
 #: changepass.php:59
 msgid "New password (again)"
-msgstr ""
+msgstr "Nouveau mot de passe (à nouveau)"
 
 #: changepass.php:64 create.php:77 lost.php:72
 msgid "Don't put anything in this field"
-msgstr ""
+msgstr "Ne rien mettre dans ce champ"
 
 #: changepass.php:66
 msgid "Change my password"
-msgstr ""
+msgstr "Modifier mon mot de passe"
 
 #: create.php:37
 msgid "Account creation on our Jabber server"
-msgstr ""
+msgstr "Création de compte sur notre serveur Jabber"
 
 #: create.php:52
 msgid ""
@@ -62,31 +62,31 @@ msgstr ""
 
 #: create.php:57 lost.php:57
 msgid "Login"
-msgstr ""
+msgstr "Nom d'utilisateur"
 
 #: create.php:57 lost.php:57
 msgid "3 characters or more"
-msgstr ""
+msgstr "3 caractères ou plus"
 
 #: create.php:60
 msgid "Password"
-msgstr ""
+msgstr "Mot de passe"
 
 #: create.php:62
 msgid "Password (again)"
-msgstr ""
+msgstr "Mot de passe (à nouveau)"
 
 #: create.php:64 lost.php:60
 msgid "Your email address"
-msgstr ""
+msgstr "Adresse email"
 
 #: create.php:67 lost.php:63
 msgid "Enter this word to prove you are human"
-msgstr ""
+msgstr "Recopiez ce mot pour prouver que vous êtes humain"
 
 #: create.php:79
 msgid "Create my account"
-msgstr ""
+msgstr "Créer mon compte"
 
 #: create.php:83
 msgid "Please note that:"
@@ -110,15 +110,15 @@ msgstr ""
 
 #: disabled.php:50
 msgid "No it's not"
-msgstr ""
+msgstr "Non ce n'est pas le cas"
 
 #: dochangepass.php:36 docreate.php:33 dolost.php:33
 msgid "The captcha is incorrect, please try again"
-msgstr ""
+msgstr "Le captcha est incorrect, merci de réessayer"
 
 #: dochangepass.php:39 docreate.php:36 dolost.php:36
 msgid "The captcha is incorrect, please try again (2)"
-msgstr ""
+msgstr "Le captcha est incorrect, merci de réessayer (2)"
 
 #: dochangepass.php:43 dolost.php:83
 msgid "The url is incorrect. please check your mail or contact us."

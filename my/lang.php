@@ -40,6 +40,6 @@ putenv("LC_MESSAGES=".$lang);
 putenv("LANG=".$lang);
 putenv("LANGUAGE=".$lang);
 setlocale(LC_ALL,$lang);
-textdomain("messages")
+textdomain("messages");
 $charset = "UTF-8";
 bind_textdomain_codeset("messages",$charset);

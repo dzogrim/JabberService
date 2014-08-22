@@ -54,8 +54,8 @@ if (count($info)) {
 <form method="post" action="create.php">
   <input type="hidden" name="csrf" value="<?php echo csrf_gen(); ?>" />
   <table style="width: 700px">
-  <tr><th style="width: 200px"><?php __("Login"); ?><sup>*</sup> <br /><i><small><?php __("3 characters or more"); ?></small></i></th>
-  <td><input type="text" name="login" id="login" value="<?php eher("login"); ?>" style="width: 200px" />@<?php echo $domain; ?></td></tr>
+  <tr><th style="width: 250px"><?php __("Login"); ?><sup>*</sup> <br /><i><small><?php __("3 characters or more"); ?></small></i></th>
+  <td style="width: 450px"><input type="text" name="login" id="login" value="<?php eher("login"); ?>" style="width: 200px" />@<?php echo $domain; ?></td></tr>
 
   <tr><th><?php __("Password"); ?><sup>*</sup></th>
   <td><input type="password" name="pass1" id="pass1" value="<?php eher("pass1"); ?>" style="width: 200px"/></td></tr>
