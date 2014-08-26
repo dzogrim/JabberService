@@ -25,8 +25,8 @@ $debug=false;
 $fields=array("csrf","id","key","pass1","pass2","url");
 $found=0;
 foreach($fields as $f) if (isset($_POST[$f])) $found++;
-$error=array();
-$info=array();
+if (!count($error)) $error=array();
+if (!count($info)) $info=array();
 
 if ($found==6 && $_POST["url"]=="") {
   $_GET["id"]=$_POST["id"];

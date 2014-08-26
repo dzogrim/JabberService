@@ -93,8 +93,9 @@ if (isset($_GET["id"]) && isset($_GET["key"])) {
     if ($already["disabledate"]!="") {
       $error[]=sprintf(_("This account have been disabled. <a href=\"%s\">Click here to restore it</a>."),"recover.php");
     }
-    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]),0,16);
-    if ($key!=$_GET["key"]) {
+    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]."-".intval(time()/14400) ),0,16);
+    $key2=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]."-".intval((time()-14400)/14400) ),0,16);
+    if ($key!=$_GET["key"] && $key2!=$_GET["key"]) {
       $error[]=_("The provided key is incorrect, please check your mail or contact us.");
     }
     if (count($error)==0) {
