@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JabberService 2014.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-26 17:26+0200\n"
+"POT-Creation-Date: 2014-08-26 17:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,6 +47,11 @@ msgstr "Ne rien mettre dans ce champ"
 #: changepass.php:66
 msgid "Change my password"
 msgstr "Modifier mon mot de passe"
+
+#: changepass.php:71 create.php:91 lost.php:79 nothing.php:53
+#, php-format
+msgid "If you are lost or need help, you can contact the tech team at %s"
+msgstr "Si vous êtes perdu ou avez besoin d'aide, vous pouvez contacter l'équipe technique à %s"
 
 #: create.php:37
 msgid "Account creation on our Jabber server"
@@ -122,11 +127,6 @@ msgstr ""
 "aussi veillez à bien l'orthographier. Nous ne l'utiliserons que pour vous "
 "envoyer un lien de restauration si vous perdez votre mot de passe."
 
-#: create.php:95
-#, php-format
-msgid "If you are lost or need help, you can contact the tech team at %s"
-msgstr ""
-
 #: disabled.php:50
 msgid "No it's not"
 msgstr "Non ce n'est pas le cas"
@@ -145,7 +145,7 @@ msgid ""
 "This account doesn't exist, or have been permanently destroyed. <a href=\"%s"
 "\">Click here to create a new account with this login</a>."
 msgstr ""
-"Ce compte n'esite pas, ou a été détruit irrémédiablement. <a href=\"%s"
+"Ce compte n'existe pas, ou a été détruit irrémédiablement. <a href=\"%s"
 "\">Cliquez ici pour créer un nouveau compte avec ce nom d'utilisateur</a>."
 
 #: dochangepass.php:51 dolost.php:99
@@ -190,7 +190,7 @@ msgstr ""
 
 #: dochangepass.php:93
 msgid "You should never be here. Please recover your password normally."
-msgstr ""
+msgstr "Vous ne devriez pas arriver ici. Merci de demander un retour de mot de passe normalemet."
 
 #: docreate.php:33 dolost.php:33
 msgid "The captcha is incorrect, please try again"
