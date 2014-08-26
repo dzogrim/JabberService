@@ -35,7 +35,7 @@ while ($c=readdir($d)) {
 }
 
 
-$r=mysql_query("SELECT * FROM accounts WHERE lastlogin<DATE_SUB(NOW(), INTERVAL ".$disable_timeout." DAY) AND createdate<DATE_SUB(NOW(), INTERVAL ".$firstlogin_timeout." DAY) AND disabledate IS NULL;");
+$r=mysql_query("SELECT * FROM accounts WHERE lastlogin<DATE_SUB(NOW(), INTERVAL ".$disable_timeout." DAY) AND createdate<DATE_SUB(NOW(), INTERVAL ".$firstlogin_timeout." DAY) AND disabledate IS NULL AND ack=1;");
 echo mysql_error();
 $isconnected=false;
 $timeout=12; // 2 minutes total timeout, enough right?
@@ -80,7 +80,7 @@ if ($isconnected) {
 }
 
 
-$r=mysql_query("SELECT * FROM accounts WHERE lastlogin<DATE_SUB(NOW(), INTERVAL ".$destroy_timeout." DAY) AND createdate<DATE_SUB(NOW(), INTERVAL ".$firstlogin_timeout." DAY) AND disabledate IS NOT NULL;");
+$r=mysql_query("SELECT * FROM accounts WHERE lastlogin<DATE_SUB(NOW(), INTERVAL ".$destroy_timeout." DAY) AND createdate<DATE_SUB(NOW(), INTERVAL ".$firstlogin_timeout." DAY) AND disabledate IS NOT NULL AND ack=1;");
 echo mysql_error();
 $isconnected=false;
 $timeout=12; // 2 minutes total timeout, enough right?

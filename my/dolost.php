@@ -25,8 +25,8 @@ $debug=false;
 $fields=array("email","login","csrf","cap","url");
 $found=0;
 foreach($fields as $f) if (isset($_POST[$f])) $found++;
-$error=array();
-$info=array();
+if (!count($error)) $error=array();
+if (!count($info)) $info=array();
 
 if ($found==5 && $_POST["url"]=="") {
   if ($_SESSION["captcha"]!=$_POST["cap"]) {
@@ -53,12 +53,13 @@ if ($found==5 && $_POST["url"]=="") {
     if ($already["email"]!=hashmail($_POST["email"],$already["email"])) { 
       $error[]=_("This account's email address is not the one you entered. Please try again with another email address.");
     }
-    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]),0,16);
+    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]."-".intval(time()/14400) ),0,16);
     if (count($error)==0) {
       require_once("class.phpmailer.php");
       require_once("class.smtp.php");
       $mail = new PHPMailer;
       $mail->isSMTP();
+      $mail->CharSet='UTF-8';
       $mail->Host = 'localhost';
       $mail->From = $mail_from;
       $mail->FromName = $mail_fromname;
@@ -99,7 +100,7 @@ if (isset($_GET["id"]) && isset($_GET["key"])) {
     if (count($error)==0) {
       // change the password (form)
       $info[]=sprintf(_("Please enter a new password (twice) for your account %s"),$already["jabberid"]);
-      require_once("changepass.php");
+      require("changepass.php");
       exit();
     } // still no error ? 
   } // no error ?

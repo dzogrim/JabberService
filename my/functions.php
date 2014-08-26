@@ -35,17 +35,24 @@ function eher($str) { if (isset($_REQUEST[$str])) ehe($_REQUEST[$str]); }
 
 function csrf_gen() {
   global $csrf_key;
+  if (!isset($_SESSION["csrf"])) {
+    $_SESSION["csrf"]=rand();
+  }
   $i=substr(md5(rand()),0,10);
-  return $i.md5($csrf_key."-".$i);
+  return $i.md5($csrf_key."-".$i."-".$_SESSION["csrf"]);
 }
 
 function csrf_check($str) {
   global $csrf_key;
+  if (!isset($_SESSION["csrf"])) {
+    // should not happen, but at least prevent a warning...
+    $_SESSION["csrf"]=rand();
+  }
   $str=strtolower($str);
   if (!preg_match('#[0-9a-f]{42}#',$str)) {
     return false;
   }
-  return ( $str == substr($str,0,10).md5($csrf_key."-".substr($str,0,10)) );
+  return ( $str == substr($str,0,10).md5($csrf_key."-".substr($str,0,10)."-".$_SESSION["csrf"]) );
 }
 
 function hashmail($mail,$salt="") {

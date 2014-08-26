@@ -32,9 +32,6 @@ if ($found==6 && $_POST["url"]=="") {
   $_GET["id"]=$_POST["id"];
   $_GET["key"]=$_POST["key"];
 
-  if ($_SESSION["captcha"]!=$_POST["cap"]) {
-    $error[]=_("The captcha is incorrect, please try again"); 
-  }
   if (!csrf_check($_POST["csrf"])) {
     $error[]=_("The captcha is incorrect, please try again (2)"); 
   }
@@ -48,8 +45,9 @@ if ($found==6 && $_POST["url"]=="") {
     if (!$already) {
       $error[]=sprintf(_("This account doesn't exist, or have been permanently destroyed. <a href=\"%s\">Click here to create a new account with this login</a>."),"create.php");
     }
-    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]),0,16);
-    if ($key!=$_POST["key"]) {
+    $key=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]."-".intval(time()/14400) ),0,16);
+    $key2=substr(md5($csrf_key."-".$already["id"]."-".$already["jabberid"]."-".intval((time()-14400)/14400) ),0,16);
+    if ($key!=$_POST["key"] && $key2!=$_POST["key"]) {
       $error[]=_("The provided key is incorrect, please check your mail or contact us.");
     }
     $pass=fixlogin($_POST["pass1"]);
@@ -89,5 +87,12 @@ if ($found==6 && $_POST["url"]=="") {
       }
     } // still no error ? 
   } // no error ?
-} // isset ?
-
+} else {  // isset ?
+  // not a post? we should come here with key & id at least
+  if (!isset($id) || !isset($key)) {
+    $error[]=_("You should never be here. Please recover your password normally.");
+    unset($_POST); unset($_REQUEST);
+    require_once("lost.php");
+    exit();
+  }
+}
