@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JabberService 2014.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-22 14:16+0200\n"
+"POT-Creation-Date: 2014-08-26 17:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,93 +108,102 @@ msgid ""
 "will only use it to send you a recover link if you lose your password."
 msgstr ""
 
+#: create.php:95
+#, php-format
+msgid "If you are lost or need help, you can contact the tech team at %s"
+msgstr ""
+
 #: disabled.php:50
 msgid "No it's not"
 msgstr ""
 
-#: dochangepass.php:36 docreate.php:33 dolost.php:33
-msgid "The captcha is incorrect, please try again"
-msgstr ""
-
-#: dochangepass.php:39 docreate.php:36 dolost.php:36
+#: dochangepass.php:36 docreate.php:36 dolost.php:36
 msgid "The captcha is incorrect, please try again (2)"
 msgstr ""
 
-#: dochangepass.php:43 dolost.php:83
+#: dochangepass.php:40 dolost.php:85
 msgid "The url is incorrect. please check your mail or contact us."
 msgstr ""
 
-#: dochangepass.php:49 dolost.php:47 dolost.php:89
+#: dochangepass.php:46 dolost.php:48 dolost.php:91
 #, php-format
 msgid ""
 "This account doesn't exist, or have been permanently destroyed. <a href=\"%s"
 "\">Click here to create a new account with this login</a>."
 msgstr ""
 
-#: dochangepass.php:53 dolost.php:96
+#: dochangepass.php:51 dolost.php:99
 msgid "The provided key is incorrect, please check your mail or contact us."
 msgstr ""
 
-#: dochangepass.php:57 docreate.php:44
+#: dochangepass.php:55 docreate.php:45
 msgid ""
 "Your passwords are not the same, or contains special characters (unicode and "
 "accents authorized though), please try again"
 msgstr ""
 
-#: dochangepass.php:60 dolost.php:50 dolost.php:92
+#: dochangepass.php:58 dolost.php:51 dolost.php:94
 #, php-format
 msgid ""
 "This account have been disabled. <a href=\"%s\">Click here to restore it</a>."
 msgstr ""
 
-#: dochangepass.php:68 docreate.php:60
+#: dochangepass.php:66 docreate.php:61
 msgid "Can't connect to jabber server"
 msgstr ""
 
-#: dochangepass.php:78
+#: dochangepass.php:76
 #, php-format
 msgid ""
 "Your password for account %s has been changed, you can use your new password "
 "right now."
 msgstr ""
 
-#: dochangepass.php:85
+#: dochangepass.php:83
 msgid ""
 "An error occurred trying to change your password, please try again later"
 msgstr ""
 
-#: docreate.php:40 dolost.php:40
+#: dochangepass.php:93
+msgid "You should never be here. Please recover your password normally."
+msgstr ""
+
+#: docreate.php:33 dolost.php:33
+msgid "The captcha is incorrect, please try again"
+msgstr ""
+
+#: docreate.php:41 dolost.php:41
 msgid ""
 "The login must be between 3 and 80 characters long, and must not contains "
 "special characters (unicode and accents authorized though)"
 msgstr ""
 
-#: docreate.php:51
+#: docreate.php:52
 msgid ""
 "This account already exist, or is disabled. You can't create that login now, "
 "please find another one!"
 msgstr ""
 
-#: docreate.php:72
+#: docreate.php:73
 msgid "Your account has been created successfully. You can use it immediately."
 msgstr ""
 
-#: docreate.php:80
+#: docreate.php:81
 msgid "An error occurred trying to create your account, please try again later"
 msgstr ""
 
-#: dolost.php:53
+#: dolost.php:54
 msgid ""
 "This account's email address is not the one you entered. Please try again "
 "with another email address."
 msgstr ""
 
-#: dolost.php:65
+#: dolost.php:67
 #, php-format
 msgid "Password lost on %s"
 msgstr ""
 
-#: dolost.php:66
+#: dolost.php:68
 #, php-format
 msgid ""
 "You receive this email because you created a Jabber Chat account on %s and "
@@ -212,17 +221,17 @@ msgid ""
 "The Jabber Chat Team\n"
 msgstr ""
 
-#: dolost.php:68
+#: dolost.php:70
 msgid "The email has NOT been sent, please try again later or contact us"
 msgstr ""
 
-#: dolost.php:70
+#: dolost.php:72
 msgid ""
 "An email has been sent to the address you entered. Please check your mail "
 "and click the link to reset your password"
 msgstr ""
 
-#: dolost.php:100
+#: dolost.php:103
 #, php-format
 msgid "Please enter a new password (twice) for your account %s"
 msgstr ""

@@ -76,6 +76,7 @@ if (count($info)) {
 
   <p>&nbsp;</p>
 
+<p><?php if (isset($support_pgp)) {  $support="<a href=\"http://pool.sks-keyservers.net/pks/lookup?op=get&amp;search=".$support_pgp."\">".str_replace("@"," [at] ",$mail_from)."</a>"; } else {   $support=str_replace("@"," [at] ",$mail_from); } printf(_("If you are lost or need help, you can contact the tech team at %s"),$support); ?></p>
 
 <?php
 require_once("footer.php");

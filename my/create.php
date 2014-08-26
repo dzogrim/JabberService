@@ -86,6 +86,10 @@ if (count($info)) {
 <li><?php __("We don't store your password or email in cleartext, but only a hashed version. We don't verify your email address, so write it down properly. We will only use it to send you a recover link if you lose your password."); ?></li>
 </ul>
 
+<p>&nbsp;</p>
+
+<p><?php if (isset($support_pgp)) {  $support="<a href=\"http://pool.sks-keyservers.net/pks/lookup?op=get&amp;search=".$support_pgp."\">".str_replace("@"," [at] ",$mail_from)."</a>"; } else {   $support=str_replace("@"," [at] ",$mail_from); } printf(_("If you are lost or need help, you can contact the tech team at %s"),$support); ?></p>
+
 <?php
 require_once("footer.php");
 ?>

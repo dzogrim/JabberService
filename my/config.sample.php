@@ -14,5 +14,10 @@ $destroy_timeout=370;
 // When you create an account, you must log into it before that many days, after that it is destroyed
 $firstlogin_timeout=7;
 
+$mail_from="jabber@laquadrature.net";
+$mail_fromname="La Quadrature du Net Jabber Team";
+$rooturl="https://jabber.lqdn.fr/my";
+$suport_pgp="0x26B773FF9FF6C148";
+
 require_once("functions.php"); 
 
