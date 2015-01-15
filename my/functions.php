@@ -69,3 +69,31 @@ function fixlogin($str) {
   return $str;
 }
 
+function myheader() {
+  if ($_SERVER["HTTP_HOST"]=="jabber.lqdn.fr") {
+    readfile("header.php");
+    return;
+  }
+
+  $f=fopen("header.php","rb");
+  $HOST="http".( ($_SERVER["HTTPS"])?"s":"" )."://".$_SERVER["HTTP_HOST"]."";
+  while ($s=fgets($f,65536)) {
+    echo str_replace("https://jabber.lqdn.fr",$HOST,$s);
+    //    if (strpos("background-image",$s)!==false) echo "L:$s:";
+  }
+  fclose($f);
+}
+
+function myfooter() {
+  if ($_SERVER["HTTP_HOST"]=="jabber.lqdn.fr") {
+    readfile("footer.php");
+    return;
+  }
+
+  $f=fopen("footer.php","rb");
+  $HOST="http".( ($_SERVER["HTTPS"])?"s":"" )."://".$_SERVER["HTTP_HOST"]."";
+  while ($s=fgets($f,65536)) {
+    echo str_replace("https://jabber.lqdn.fr",$HOST,$s);
+  }
+  fclose($f);
+}

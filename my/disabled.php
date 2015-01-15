@@ -21,7 +21,7 @@
 
 require_once("config.php"); 
 
-require_once("header.php");
+myheader();
 require_once("css.php"); 
 ?>
 
@@ -52,6 +52,6 @@ if (count($info)) {
 
 
 <?php
-require_once("footer.php");
+  myfooter();
 ?>
 
