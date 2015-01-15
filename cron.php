@@ -62,11 +62,14 @@ while ($c=mysql_fetch_array($r)) {
   
   $random=md5(rand().rand().rand());
   echo "Changing password for user ".$c["jabberid"]."\n";  
-  fputs($f,'user:password("'.$c["jabberid"].'@'.$domain.'","'.$random."\")\n");
+  $cmd='user:password("'.$c["jabberid"].'","'.$random."\")\n";
+  if ($debug) echo "launching command:$cmd\n";
+  fputs($f,$cmd);
   $s=fgets($f,1024);
   if ($debug) echo ":".$s.":<br>";
   if (trim($s)=="| OK: User password changed") {
-      mysql_query("UPDATE accounts SET disabledate=NOW() WHERE jabberid='".addslashes($c["jabberid"]."@".$domain)."';");
+      mysql_query("UPDATE accounts SET disabledate=NOW() WHERE jabberid='".addslashes($c["jabberid"])."';");
+      echo mysql_error();
       echo "Disabled account ".$c["jabberid"]."\n";
     } else {
       if ($debug) { $s=fgets($f,1024); echo ":".$s.":<br>"; }
@@ -106,11 +109,11 @@ while ($c=mysql_fetch_array($r)) {
   }
   
   echo "Deleting user ".$c["jabberid"]."\n";  
-  fputs($f,'user:delete("'.$c["jabberid"].'@'.$domain.'"'.")\n");
+  fputs($f,'user:delete("'.$c["jabberid"].'"'.")\n");
   $s=fgets($f,1024);
   if ($debug) echo ":".$s.":<br>";
   if (trim($s)=="| OK: User deleted") {
-      mysql_query("DELETE FROM accounts WHERE jabberid='".addslashes($c["jabberid"]."@".$domain)."';");
+      mysql_query("DELETE FROM accounts WHERE jabberid='".addslashes($c["jabberid"])."';");
       echo "Destroyed account ".$c["jabberid"]."\n";
     } else {
       if ($debug) { $s=fgets($f,1024); echo ":".$s.":<br>"; }
